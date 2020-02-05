@@ -1,8 +1,10 @@
-<h2>Pizza Order</h2>
+<h2 class="order_header">Pizza Order</h2>
 
-<ul>
-  <li>First Name: <%= @order.first_name %></li>
-  <li>Lase Name: <%= @order.last_name %></li>
-  <li>Topping: <%= @order.topping%></li>
-  <li>Quantity: <%= @order.quantity %></li>
-</ul>
+<div class="show_order">
+  <ul>
+    <li>First Name: <%= @order.first_name %></li>
+    <li>Last Name: <%= @order.last_name %></li>
+    <li>Topping: <%= @order.topping%></li>
+    <li>Quantity: <%= @order.quantity %></li>
+  </ul>
+</div>

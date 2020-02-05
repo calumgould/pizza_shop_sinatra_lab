@@ -1,12 +1,23 @@
-<p>ALL THE PIZZAS!</p>
+<h1 class="order_header">ALL THE PIZZAS!</h1>
 
-<% @orders.each do |order| %>
-  <p>Name: <%= order.pretty_name() %></p>
-  <p>Order: <%= order.quantity %> x <%= order.topping %></p>
-  <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p>
-  <p><a href="/pizza-orders/<%= order.id %>/edit">Edit Order</a></p>
-  <form action="/pizza-orders/<%= order.id %>/delete" method="post">
-    <input type="submit" value="Delete Order">
-  </form>
-  <hr />
-<% end %>
+<div class="orders">
+  <% @orders.each do |order| %>
+    <br>
+    <h3>Name: <%= order.pretty_name() %></h3>
+    <br>
+    <h3>Order: <%= order.quantity %> x <%= order.topping %></h3>
+    <br><br><br>
+    <div class="order_buttons">
+      <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p>
+      <br><br>
+      <p><a href="/pizza-orders/<%= order.id %>/edit">Edit Order</a></p>
+    </div>
+
+    <form action="/pizza-orders/<%= order.id %>/delete" method="post">
+      <br>
+      <input type="submit" value="Delete Order">
+      <br>
+    </form>
+    <hr />
+  <% end %>
+</div>

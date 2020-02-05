@@ -5,6 +5,12 @@ require( 'pry-byebug' )
 require_relative("./models/pizza_order")
 also_reload("./models/*")
 
+# HOME #
+
+get "/" do
+  erb(:home)
+end
+
 # READ - all/index #
 
 get "/pizza-orders" do
